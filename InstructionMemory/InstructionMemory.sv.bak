@@ -1,0 +1,51 @@
+module InstructionMemory(Clk, Reset, Din, Dout);
+	input Clk, Reset;
+	input [15:0] Din;
+	output [15:0] Dout; 
+
+	logic [8:0] Addr;
+	ROM unit1 (
+	.address(Addr),
+	.clock(Clk),
+	.q(Dout));
+
+	always_ff @(posedge Clk) begin
+	
+	if(Reset)
+	 Addr <= 9'd0;
+	else if (Addr != 9'd255)
+	 Addr <= Addr + 1'b1;
+	else
+	 Addr <= 9'd0;
+	end
+
+endmodule
+
+`timescale 1ns/1ns
+module InstructionMemory_tb();
+   logic Clk, Reset;
+   logic [15:0]Din;	
+	logic [15:0]Dout;
+   
+   InstructionMemory dut(Clk, Reset, Din, Dout);
+	
+	
+	always begin
+	  Clk =0; #10;
+	  Clk =1; #10;
+	end
+	
+	initial  begin
+	  Reset = 1'b1; #53; //make Address = 0;
+	  Reset = 1'b0;
+	  for (int k = 0; k< 256; k++) begin
+	    @(posedge Clk); 
+	    #5 $display(k, $time, Dout); 
+	  end
+	  $stop;
+	end
+	
+	
+	//initial $monitor();
+	
+endmodule

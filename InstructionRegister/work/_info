@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jorda/Desktop/InstructionRegister
+vIR
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1622824847
+!i10b 1
+!s100 @@4VWL;^Fa8XIPfZodCb21
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IzKloU;UY6z7>PQUB[<GhO3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1622824845
+Z6 8./IR.sv
+Z7 F./IR.sv
+!i122 41
+L0 7 14
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1622824847.000000
+Z10 !s107 ./IR.sv|
+Z11 !s90 -reportprogress|300|./IR.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@i@r
+vIR_tb
+R1
+R2
+!i10b 1
+!s100 RS3AQzi6bVG2dDOXfaaJ;1
+R3
+IYAda<lZP2jmdz6z40_Sez2
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 41
+L0 22 30
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@i@r_tb
+vRegister_tb
+R1
+!s110 1622600857
+!i10b 1
+!s100 F_Z58SocU6>Cj7kj:PQM:2
+R3
+I1mlm]M;c67=7:^PgR8TM^2
+R4
+S1
+R0
+w1622600856
+R6
+R7
+!i122 4
+L0 26 18
+R8
+r1
+!s85 0
+31
+!s108 1622600857.000000
+R10
+R11
+!i113 1
+R12
+n@register_tb

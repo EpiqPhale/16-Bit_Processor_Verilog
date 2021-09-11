@@ -1,0 +1,739 @@
+# Reading pref.tcl
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./InstructionMemory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:41 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./InstructionMemory.sv 
+# -- Compiling module InstructionMemory
+# -- Compiling module InstructionMemory_tb
+# 
+# Top level modules:
+# 	InstructionMemory_tb
+# End time: 19:21:41 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./AlteraROM.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:41 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./AlteraROM.v 
+# -- Compiling module AlteraROM
+# 
+# Top level modules:
+# 	AlteraROM
+# End time: 19:21:41 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  InstructionMemory_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug InstructionMemory_tb 
+# Start time: 19:21:41 on Jun 01,2021
+# Loading sv_std.std
+# Loading work.InstructionMemory_tb
+# Loading work.InstructionMemory
+# Loading work.AlteraROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (9) for port 'address'. The port definition is at: ./AlteraROM.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemory_tb/dut/unit1 File: ./InstructionMemory.sv Line: 15
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /InstructionMemory_tb/Clk
+# add wave -noupdate /InstructionMemory_tb/Reset
+# add wave -noupdate /InstructionMemory_tb/Dout
+# add wave -noupdate /InstructionMemory_tb/Din
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "IM.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemory_tb/dut/unit1/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read IM.mif.
+#           0                  75    1
+#           1                  95    1
+#           2                 115    1
+#           3                 135    0
+#           4                 155    0
+#           5                 175    0
+#           6                 195    0
+#           7                 215    0
+#           8                 235    0
+#           9                 255    0
+#          10                 275    0
+#          11                 295    0
+#          12                 315    0
+#          13                 335    0
+#          14                 355    0
+#          15                 375    0
+#          16                 395    0
+#          17                 415    0
+#          18                 435    0
+#          19                 455    0
+#          20                 475    0
+#          21                 495    0
+#          22                 515    0
+#          23                 535    0
+#          24                 555    0
+#          25                 575    0
+#          26                 595    0
+#          27                 615    0
+#          28                 635    0
+#          29                 655    0
+#          30                 675    0
+#          31                 695    0
+#          32                 715    0
+#          33                 735    0
+#          34                 755    0
+#          35                 775    0
+#          36                 795    0
+#          37                 815    0
+#          38                 835    0
+#          39                 855    0
+#          40                 875    0
+#          41                 895    0
+#          42                 915    0
+#          43                 935    0
+#          44                 955    0
+#          45                 975    0
+#          46                 995    0
+#          47                1015    0
+#          48                1035    0
+#          49                1055    0
+#          50                1075    0
+#          51                1095    0
+#          52                1115    0
+#          53                1135    0
+#          54                1155    0
+#          55                1175    0
+#          56                1195    0
+#          57                1215    0
+#          58                1235    0
+#          59                1255    0
+#          60                1275    0
+#          61                1295    0
+#          62                1315    0
+#          63                1335    0
+#          64                1355    0
+#          65                1375    0
+#          66                1395    0
+#          67                1415    0
+#          68                1435    0
+#          69                1455    0
+#          70                1475    0
+#          71                1495    0
+#          72                1515    0
+#          73                1535    0
+#          74                1555    0
+#          75                1575    0
+#          76                1595    0
+#          77                1615    0
+#          78                1635    0
+#          79                1655    0
+#          80                1675    0
+#          81                1695    0
+#          82                1715    0
+#          83                1735    0
+#          84                1755    0
+#          85                1775    0
+#          86                1795    0
+#          87                1815    0
+#          88                1835    0
+#          89                1855    0
+#          90                1875    0
+#          91                1895    0
+#          92                1915    0
+#          93                1935    0
+#          94                1955    0
+#          95                1975    0
+#          96                1995    0
+#          97                2015    0
+#          98                2035    0
+#          99                2055    0
+#         100                2075    0
+#         101                2095    0
+#         102                2115    0
+#         103                2135    0
+#         104                2155    0
+#         105                2175    0
+#         106                2195    0
+#         107                2215    0
+#         108                2235    0
+#         109                2255    0
+#         110                2275    0
+#         111                2295    0
+#         112                2315    0
+#         113                2335    0
+#         114                2355    0
+#         115                2375    0
+#         116                2395    0
+#         117                2415    0
+#         118                2435    0
+#         119                2455    0
+#         120                2475    0
+#         121                2495    0
+#         122                2515    0
+#         123                2535    0
+#         124                2555    0
+#         125                2575    0
+#         126                2595    0
+#         127                2615    0
+#         128                2635    0
+#         129                2655    1
+#         130                2675    1
+#         131                2695    0
+#         132                2715    0
+#         133                2735    0
+#         134                2755    0
+#         135                2775    0
+#         136                2795    0
+#         137                2815    0
+#         138                2835    0
+#         139                2855    0
+#         140                2875    0
+#         141                2895    0
+#         142                2915    0
+#         143                2935    0
+#         144                2955    0
+#         145                2975    0
+#         146                2995    0
+#         147                3015    0
+#         148                3035    0
+#         149                3055    0
+#         150                3075    0
+#         151                3095    0
+#         152                3115    0
+#         153                3135    0
+#         154                3155    0
+#         155                3175    0
+#         156                3195    0
+#         157                3215    0
+#         158                3235    0
+#         159                3255    0
+#         160                3275    0
+#         161                3295    0
+#         162                3315    0
+#         163                3335    0
+#         164                3355    0
+#         165                3375    0
+#         166                3395    0
+#         167                3415    0
+#         168                3435    0
+#         169                3455    0
+#         170                3475    0
+#         171                3495    0
+#         172                3515    0
+#         173                3535    0
+#         174                3555    0
+#         175                3575    0
+#         176                3595    0
+#         177                3615    0
+#         178                3635    0
+#         179                3655    0
+#         180                3675    0
+#         181                3695    0
+#         182                3715    0
+#         183                3735    0
+#         184                3755    0
+#         185                3775    0
+#         186                3795    0
+#         187                3815    0
+#         188                3835    0
+#         189                3855    0
+#         190                3875    0
+#         191                3895    0
+#         192                3915    0
+#         193                3935    0
+#         194                3955    0
+#         195                3975    0
+#         196                3995    0
+#         197                4015    0
+#         198                4035    0
+#         199                4055    0
+#         200                4075    0
+#         201                4095    0
+#         202                4115    0
+#         203                4135    0
+#         204                4155    0
+#         205                4175    0
+#         206                4195    0
+#         207                4215    0
+#         208                4235    0
+#         209                4255    0
+#         210                4275    0
+#         211                4295    0
+#         212                4315    0
+#         213                4335    0
+#         214                4355    0
+#         215                4375    0
+#         216                4395    0
+#         217                4415    0
+#         218                4435    0
+#         219                4455    0
+#         220                4475    0
+#         221                4495    0
+#         222                4515    0
+#         223                4535    0
+#         224                4555    0
+#         225                4575    0
+#         226                4595    0
+#         227                4615    0
+#         228                4635    0
+#         229                4655    0
+#         230                4675    0
+#         231                4695    0
+#         232                4715    0
+#         233                4735    0
+#         234                4755    0
+#         235                4775    0
+#         236                4795    0
+#         237                4815    0
+#         238                4835    0
+#         239                4855    0
+#         240                4875    0
+#         241                4895    0
+#         242                4915    0
+#         243                4935    0
+#         244                4955    0
+#         245                4975    0
+#         246                4995    0
+#         247                5015    0
+#         248                5035    0
+#         249                5055    0
+#         250                5075    0
+#         251                5095    0
+#         252                5115    0
+#         253                5135    0
+#         254                5155    0
+#         255                5175    0
+# ** Note: $stop    : ./InstructionMemory.sv(53)
+#    Time: 5175 ns  Iteration: 0  Instance: /InstructionMemory_tb
+# Break in Module InstructionMemory_tb at ./InstructionMemory.sv line 53
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 5433750 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/jorda/Desktop/InstructionMemory/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/jorda/Desktop/InstructionMemory/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./InstructionMemory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./InstructionMemory.sv 
+# -- Compiling module InstructionMemory
+# -- Compiling module InstructionMemory_tb
+# 
+# Top level modules:
+# 	InstructionMemory_tb
+# End time: 19:23:01 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./AlteraROM.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./AlteraROM.v 
+# -- Compiling module AlteraROM
+# 
+# Top level modules:
+# 	AlteraROM
+# End time: 19:23:01 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  InstructionMemory_tb
+# End time: 19:23:09 on Jun 01,2021, Elapsed time: 0:01:28
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug InstructionMemory_tb 
+# Start time: 19:23:09 on Jun 01,2021
+# Loading sv_std.std
+# Loading work.InstructionMemory_tb
+# Loading work.InstructionMemory
+# Loading work.AlteraROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (9) for port 'address'. The port definition is at: ./AlteraROM.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemory_tb/dut/unit1 File: ./InstructionMemory.sv Line: 14
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /InstructionMemory_tb/Clk
+# add wave -noupdate /InstructionMemory_tb/Reset
+# add wave -noupdate /InstructionMemory_tb/Dout
+# add wave -noupdate /InstructionMemory_tb/Din
+# ** UI-Msg: (vish-4014) No objects found matching '/InstructionMemory_tb/Din'.
+# Executing ONERROR command at macro ./wave.do line 6
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "IM.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemory_tb/dut/unit1/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read IM.mif.
+#           0                  75    1
+#           1                  95    1
+#           2                 115    1
+#           3                 135    0
+#           4                 155    0
+#           5                 175    0
+#           6                 195    0
+#           7                 215    0
+#           8                 235    0
+#           9                 255    0
+#          10                 275    0
+#          11                 295    0
+#          12                 315    0
+#          13                 335    0
+#          14                 355    0
+#          15                 375    0
+#          16                 395    0
+#          17                 415    0
+#          18                 435    0
+#          19                 455    0
+#          20                 475    0
+#          21                 495    0
+#          22                 515    0
+#          23                 535    0
+#          24                 555    0
+#          25                 575    0
+#          26                 595    0
+#          27                 615    0
+#          28                 635    0
+#          29                 655    0
+#          30                 675    0
+#          31                 695    0
+#          32                 715    0
+#          33                 735    0
+#          34                 755    0
+#          35                 775    0
+#          36                 795    0
+#          37                 815    0
+#          38                 835    0
+#          39                 855    0
+#          40                 875    0
+#          41                 895    0
+#          42                 915    0
+#          43                 935    0
+#          44                 955    0
+#          45                 975    0
+#          46                 995    0
+#          47                1015    0
+#          48                1035    0
+#          49                1055    0
+#          50                1075    0
+#          51                1095    0
+#          52                1115    0
+#          53                1135    0
+#          54                1155    0
+#          55                1175    0
+#          56                1195    0
+#          57                1215    0
+#          58                1235    0
+#          59                1255    0
+#          60                1275    0
+#          61                1295    0
+#          62                1315    0
+#          63                1335    0
+#          64                1355    0
+#          65                1375    0
+#          66                1395    0
+#          67                1415    0
+#          68                1435    0
+#          69                1455    0
+#          70                1475    0
+#          71                1495    0
+#          72                1515    0
+#          73                1535    0
+#          74                1555    0
+#          75                1575    0
+#          76                1595    0
+#          77                1615    0
+#          78                1635    0
+#          79                1655    0
+#          80                1675    0
+#          81                1695    0
+#          82                1715    0
+#          83                1735    0
+#          84                1755    0
+#          85                1775    0
+#          86                1795    0
+#          87                1815    0
+#          88                1835    0
+#          89                1855    0
+#          90                1875    0
+#          91                1895    0
+#          92                1915    0
+#          93                1935    0
+#          94                1955    0
+#          95                1975    0
+#          96                1995    0
+#          97                2015    0
+#          98                2035    0
+#          99                2055    0
+#         100                2075    0
+#         101                2095    0
+#         102                2115    0
+#         103                2135    0
+#         104                2155    0
+#         105                2175    0
+#         106                2195    0
+#         107                2215    0
+#         108                2235    0
+#         109                2255    0
+#         110                2275    0
+#         111                2295    0
+#         112                2315    0
+#         113                2335    0
+#         114                2355    0
+#         115                2375    0
+#         116                2395    0
+#         117                2415    0
+#         118                2435    0
+#         119                2455    0
+#         120                2475    0
+#         121                2495    0
+#         122                2515    0
+#         123                2535    0
+#         124                2555    0
+#         125                2575    0
+#         126                2595    0
+#         127                2615    0
+#         128                2635    0
+#         129                2655    1
+#         130                2675    1
+#         131                2695    0
+#         132                2715    0
+#         133                2735    0
+#         134                2755    0
+#         135                2775    0
+#         136                2795    0
+#         137                2815    0
+#         138                2835    0
+#         139                2855    0
+#         140                2875    0
+#         141                2895    0
+#         142                2915    0
+#         143                2935    0
+#         144                2955    0
+#         145                2975    0
+#         146                2995    0
+#         147                3015    0
+#         148                3035    0
+#         149                3055    0
+#         150                3075    0
+#         151                3095    0
+#         152                3115    0
+#         153                3135    0
+#         154                3155    0
+#         155                3175    0
+#         156                3195    0
+#         157                3215    0
+#         158                3235    0
+#         159                3255    0
+#         160                3275    0
+#         161                3295    0
+#         162                3315    0
+#         163                3335    0
+#         164                3355    0
+#         165                3375    0
+#         166                3395    0
+#         167                3415    0
+#         168                3435    0
+#         169                3455    0
+#         170                3475    0
+#         171                3495    0
+#         172                3515    0
+#         173                3535    0
+#         174                3555    0
+#         175                3575    0
+#         176                3595    0
+#         177                3615    0
+#         178                3635    0
+#         179                3655    0
+#         180                3675    0
+#         181                3695    0
+#         182                3715    0
+#         183                3735    0
+#         184                3755    0
+#         185                3775    0
+#         186                3795    0
+#         187                3815    0
+#         188                3835    0
+#         189                3855    0
+#         190                3875    0
+#         191                3895    0
+#         192                3915    0
+#         193                3935    0
+#         194                3955    0
+#         195                3975    0
+#         196                3995    0
+#         197                4015    0
+#         198                4035    0
+#         199                4055    0
+#         200                4075    0
+#         201                4095    0
+#         202                4115    0
+#         203                4135    0
+#         204                4155    0
+#         205                4175    0
+#         206                4195    0
+#         207                4215    0
+#         208                4235    0
+#         209                4255    0
+#         210                4275    0
+#         211                4295    0
+#         212                4315    0
+#         213                4335    0
+#         214                4355    0
+#         215                4375    0
+#         216                4395    0
+#         217                4415    0
+#         218                4435    0
+#         219                4455    0
+#         220                4475    0
+#         221                4495    0
+#         222                4515    0
+#         223                4535    0
+#         224                4555    0
+#         225                4575    0
+#         226                4595    0
+#         227                4615    0
+#         228                4635    0
+#         229                4655    0
+#         230                4675    0
+#         231                4695    0
+#         232                4715    0
+#         233                4735    0
+#         234                4755    0
+#         235                4775    0
+#         236                4795    0
+#         237                4815    0
+#         238                4835    0
+#         239                4855    0
+#         240                4875    0
+#         241                4895    0
+#         242                4915    0
+#         243                4935    0
+#         244                4955    0
+#         245                4975    0
+#         246                4995    0
+#         247                5015    0
+#         248                5035    0
+#         249                5055    0
+#         250                5075    0
+#         251                5095    0
+#         252                5115    0
+#         253                5135    0
+#         254                5155    0
+#         255                5175    0
+# ** Note: $stop    : ./InstructionMemory.sv(51)
+#    Time: 5175 ns  Iteration: 0  Instance: /InstructionMemory_tb
+# Break in Module InstructionMemory_tb at ./InstructionMemory.sv line 51
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 5433750 ps
+# 
+# End

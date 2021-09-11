@@ -1,0 +1,63 @@
+# Reading pref.tcl
+# do InstructionMemory_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jorda/Desktop/InstructionMemory {C:/Users/jorda/Desktop/InstructionMemory/AlteraROM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:11:37 on Jun 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jorda/Desktop/InstructionMemory" C:/Users/jorda/Desktop/InstructionMemory/AlteraROM.v 
+# -- Compiling module AlteraROM
+# 
+# Top level modules:
+# 	AlteraROM
+# End time: 19:11:37 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/jorda/Desktop/InstructionMemory {C:/Users/jorda/Desktop/InstructionMemory/InstructionMemory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:11:37 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/jorda/Desktop/InstructionMemory" C:/Users/jorda/Desktop/InstructionMemory/InstructionMemory.sv 
+# -- Compiling module InstructionMemory
+# -- Compiling module InstructionMemory_tb
+# 
+# Top level modules:
+# 	InstructionMemory_tb
+# End time: 19:11:37 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do runrtl.do
+# Cannot open macro file: runrtl.do
+vsim -gui -l msim_transcript rtl_work.InstructionMemory_tb
+# vsim -gui -l msim_transcript rtl_work.InstructionMemory_tb 
+# Start time: 19:12:06 on Jun 01,2021
+# Loading sv_std.std
+# Loading rtl_work.InstructionMemory_tb
+# Loading rtl_work.InstructionMemory
+# Loading rtl_work.AlteraROM
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemory_tb/dut/unit1 File: C:/Users/jorda/Desktop/InstructionMemory/AlteraROM.v Line: 59
+#         Searched libraries:
+#             C:/Users/jorda/Desktop/InstructionMemory/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 19:12:06 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -gui -l msim_transcript rtl_work.InstructionMemory
+# vsim -gui -l msim_transcript rtl_work.InstructionMemory 
+# Start time: 19:12:37 on Jun 01,2021
+# Loading sv_std.std
+# Loading rtl_work.InstructionMemory
+# Loading rtl_work.AlteraROM
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /InstructionMemory/unit1 File: C:/Users/jorda/Desktop/InstructionMemory/AlteraROM.v Line: 59
+#         Searched libraries:
+#             C:/Users/jorda/Desktop/InstructionMemory/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 19:12:37 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

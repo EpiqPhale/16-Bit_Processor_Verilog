@@ -1,0 +1,84 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jorda/Desktop/InstructionMemory
+vInstructionMemory
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1622598790
+!i10b 1
+!s100 UFB34N27hETNZRIhXbXLM1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IR[SghWNWa4kcLgAVMiJWX1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1622597716
+Z6 8./InstructionMemory.sv
+Z7 F./InstructionMemory.sv
+!i122 16
+L0 1 22
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1622598790.000000
+Z10 !s107 ./InstructionMemory.sv|
+Z11 !s90 -reportprogress|300|./InstructionMemory.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@instruction@memory
+vInstructionMemory_tb
+R1
+R2
+!i10b 1
+!s100 [aJJZLfAX:UlTnl]YH[P>2
+R3
+IC[cALk8AHScPJF2AFY<2G1
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 16
+L0 25 27
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@instruction@memory_tb
+vROM
+R2
+!i10b 1
+!s100 Gd4cQ2fJQLU@<W`7XKS7f2
+R3
+I:hMP<]Ua@jz6>gm6jD2LN3
+R4
+R0
+w1622596783
+8./ROM.v
+F./ROM.v
+!i122 17
+L0 40 61
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./ROM.v|
+!s90 -reportprogress|300|./ROM.v|
+!i113 1
+R12
+n@r@o@m

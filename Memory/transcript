@@ -1,0 +1,181 @@
+# Reading pref.tcl
+dir
+#  Volume in drive G is ALL-TFR
+#  Volume Serial Number is D3C4-B35E
+# 
+#  Directory of G:\UWTspring2021\Memory
+# 
+# 06/01/2021  12:46 PM    <DIR>          .
+# 06/01/2021  12:46 PM    <DIR>          ..
+# 06/01/2021  12:47 PM             1,059 myData.mif
+# 06/01/2021  02:37 PM               922 Memory.sv
+# 06/01/2021  01:40 PM               146 AlteraDmem_inst.v
+# 06/01/2021  01:40 PM               453 AlteraDmem.qip
+# 06/01/2021  01:40 PM             7,450 AlteraDmem.v
+# 06/01/2021  01:40 PM             5,929 AlteraDmem_bb.v
+# 06/01/2021  01:46 PM             1,349 Memory.qpf
+# 06/01/2021  01:47 PM             3,563 Memory.qsf
+# 06/01/2021  01:46 PM    <DIR>          db
+# 06/01/2021  02:13 PM             1,011 runrtl.do
+# 05/01/2021  09:00 PM                59 Launch_ModelSim.bat
+# 06/01/2021  02:11 PM               721 wave.do
+# 06/01/2021  01:41 PM                48 Memory.sv.bak
+# 06/01/2021  02:38 PM                20 transcript
+#               13 File(s)         22,730 bytes
+#                3 Dir(s)  59,930,427,392 bytes free
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./Memory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:42:22 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./Memory.sv 
+# -- Compiling module Memory
+# ** Error: (vlog-13069) ./Memory.sv(35): near "1ns": syntax error, unexpected TIME_LITERAL.
+# ** Error: ./Memory.sv(35): (vlog-13205) Syntax error found in the scope following 'timescale'. Is there a missing '::'?
+# End time: 14:42:23 on Jun 01,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 16
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Memory.sv""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./Memory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:44:37 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./Memory.sv 
+# -- Compiling module Memory
+# ** Error: (vlog-13069) ./Memory.sv(35): near "1ns": syntax error, unexpected TIME_LITERAL.
+# ** Error: ./Memory.sv(35): (vlog-13205) Syntax error found in the scope following 'timescale'. Is there a missing '::'?
+# End time: 14:44:37 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 16
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Memory.sv""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./Memory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:50:05 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./Memory.sv 
+# -- Compiling module Memory
+# ** Error: (vlog-13053) ./Memory.sv(35): near "'t": Illegal base specifier in numeric constant.
+# ** Error: (vlog-13069) ./Memory.sv(35): near "'t": syntax error, unexpected BASE, expecting class.
+# End time: 14:50:05 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 16
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Memory.sv""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./Memory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:06:25 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./Memory.sv 
+# -- Compiling module Memory
+# ** Error: (vlog-13069) ./Memory.sv(35): near "1ns": syntax error, unexpected TIME_LITERAL.
+# ** Error: ./Memory.sv(35): (vlog-13205) Syntax error found in the scope following 'timescale'. Is there a missing '::'?
+# End time: 15:06:26 on Jun 01,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 16
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Memory.sv""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./Memory.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:21:16 on Jun 01,2021
+# vlog -reportprogress 300 -work work "+acc" ./Memory.sv 
+# -- Compiling module Memory
+# ** Error: (vlog-13069) ./Memory.sv(35): near "1ns": syntax error, unexpected TIME_LITERAL.
+# ** Error: ./Memory.sv(35): (vlog-13205) Syntax error found in the scope following 'timescale'. Is there a missing '::'?
+# End time: 15:21:17 on Jun 01,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 16
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Memory.sv""

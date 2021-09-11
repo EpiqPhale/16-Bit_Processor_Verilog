@@ -1,0 +1,19 @@
+// TCES330, Spring 2021
+// KeyFilter follows a button synchronizer
+module KeyFilter(Clk, In, Out);
+input Clk;// System clock
+input In;// Input signal
+output logic Out;// A filtered version of In (one cycle on)
+localparam DUR = 5_000_000 -1;
+reg[32:0] Countdown = 0;
+always @(posedgeClk) begin
+Out <= 0;
+if (Countdown == 0) begin
+if (In) beginOut <= 1;
+Countdown <= DUR;
+end
+end else begin
+Countdown <= Countdown -1;
+end
+end
+endmodule

@@ -1,0 +1,148 @@
+// James Wedum
+// TCES 330, Spring 2021
+// 6/3/2021
+// Project 1
+
+/*
+ * This module describes the Finite State Machine (controller) for the TCES 330 class project.
+ *
+ *	--Inputs--
+ *	Clk = The 50 MHz system clock(?)
+ *	Reset = Syncronous high-active reset.
+ *	IR = 16-bit connection to instruction register;
+ *
+ *	--Outputs--
+ *	PC_clr = Program counter (PC) clear command.
+ *	IR_ld = Instruction load command
+ *	PC_up = PC increment command
+ *	D_addr = Datamemory address (8 bits)
+ *	D_wr = Data memory write enable
+ *	RF_s = Mux selectline
+ *	RF_Ra_addr = Register file A-side read address (4 bits)
+ *	RF_Rb_addr = Registerfile B-side read address (4 bits)
+ *	RF_W_en = Register file write enable
+ *	RF_W_Addr = Register file write address (4 bits)
+ *	ALU_s0 = ALU function select (3 bits)
+ *	CurrentState = The current state of the FSM
+ *	NextState = The next state of the FSM;
+ */
+module FSM(Clk, Reset, IR, PC_clr, IR_ld, PC_up, D_addr, D_wr, RF_s, 
+		RF_Ra_addr, RF_Rb_addr, RF_W_en, RF_W_Addr, ALU_s0, CurrentState, NextState);
+
+	input Clk, Reset;
+	input [15:0] IR;
+	
+	output PC_clr, IR_ld, PC_up, D_wr, RF_s, RF_W_en;
+	output [2:0] ALU_s0;
+	output [3:0] RF_Ra_addr, RF_Rb_addr, RF_W_Addr;
+	output [7:0] D_addr;
+	
+	output logic [3:0] CurrentState = 4'h0, NextState;
+	
+	//named states
+	localparam Init = 4'h0, Fetch = 4'h1, Decode = 4'h2, Halt = 4'h3, Sub = 4'h4, Add = 4'h5, 
+				Store = 4'h6, Ld_A = 4'h7, Ld_B = 4'h8, Noop = 4'h9;
+	
+	always_comb begin
+		case(CurrentState)
+			Init:	begin
+						PC_clr = 1;
+						NextState = Fetch;
+					end
+			
+			Fetch:	begin
+						PC_clr = 0;
+						IR_ld = 1;
+						PC_up = 1;
+						NextState = Decode;
+					end
+			
+			Decode:	begin
+						if(IR[15:12] == 4'b0000) NextState = Noop;
+						else if(IR[15:12] == 4'b0010) NextState = Ld_A;
+						else if(IR[15:12] == 4'b0001) NextState = Store;
+						else if(IR[15:12] == 4'b0011) NextState = Add;
+						else if(IR[15:12] == 4'b0100) NextState = Sub;
+						else if(IR[15:12] == 4'b0101) NextState = Halt;
+						else NextState = Halt;	//Unknown opcode = HCF
+					end
+			
+			Halt:	NextState = Halt;
+			
+			Sub:	begin
+						RF_W_Addr = IR[3:0];
+						RF_W_en = 1'b1;
+						RF_Ra_addr = IR[11:8];
+						RF_Rb_addr = IR[7:4];
+						ALU_s0 = 3'd2;
+						RF_s = 1'b0;
+						NextState = Fetch;
+					end
+			
+			Add:	begin
+						RF_W_Addr = IR[3:0];
+						RF_W_en = 1'b1;
+						RF_Ra_addr = IR[11:8];
+						RF_Rb_addr = IR[7:4];
+						ALU_s0 = 3'd1;
+						RF_s = 1'b0;
+						NextState = Fetch;
+					end
+					
+			Store:	begin
+						D_addr = IR[7:0];
+						D_wr = 1'b1;
+						RF_Ra_addr = IR[11:8];
+						NextState = Fetch;
+					end
+			
+			Ld_A:	begin
+						D_addr = IR[11:4];
+						RF_s = 1'b1;
+						RF_W_Addr = IR[3:0];
+						NextState = Ld_B;
+					end
+			
+			Ld_B:	begin
+						D_addr = IR[11:4];
+						RF_s = 1'b1;
+						RF_W_Addr = IR[3:0];
+						RF_W_en = 1'b1;
+						NextState = Fetch;
+					end
+			
+			Noop:	begin
+						NextState = Fetch;
+					end
+			
+			default NextState = Init;
+		endcase
+	end
+	
+	always_ff@(posedge Clk) begin
+		CurrentState <= NextState;
+	end
+	
+	
+endmodule
+
+module FSM_tb();
+	logic Clk, Reset, PC_clr, IR_ld, PC_up, D_wr, RF_s, RF_W_en;
+	input [15:0] IR;
+	logic [2:0] ALU_s0;
+	logic [3:0] RF_Ra_addr, RF_Rb_addr, RF_W_Addr, CurrentState, NextState;
+	logic [7:0] D_addr;
+	
+	FSM DUT (.Clk(Clk), .Reset(Reset), .IR(IR), .PC_clr(PC_clr), .IR_ld(IR_ld), .PC_up(PC_up), 
+		.D_addr(D_addr), .D_wr(D_wr), .RF_s(RF_s), .RF_Ra_addr(RF_Ra_addr), .RF_Rb_addr(RF_Rb_addr), 
+		.RF_W_en(RF_W_en), .RF_W_Addr(RF_W_Addr), .ALU_s0(ALU_s0), .CurrentState(CurrentState), 
+		.NextState(NextState));
+	
+	always begin
+		Clk = 1'b0; #10;
+		Clk = 1'b1; #10;
+	end
+	
+
+	
+endmodule

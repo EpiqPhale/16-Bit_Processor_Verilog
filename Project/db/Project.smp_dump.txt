@@ -1,0 +1,6 @@
+
+State Machine - |Project|ButtonSync:BS|State
+Name State.S_A State.S_C State.S_B 
+State.S_A 0 0 0 
+State.S_B 1 0 1 
+State.S_C 1 1 0 

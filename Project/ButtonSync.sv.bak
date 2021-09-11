@@ -1,0 +1,13 @@
+// James Wedum
+// TCES 330, Spring 2021
+// 6/4/2021
+// Project 1
+
+//Based on ButtonSyncRegReg
+module ButtonSync(Clk, Bin, Bout);
+	input Clk, Bin;
+	output logic Bout;
+	
+	logic Bin_, Bin__;
+	
+endmodule

@@ -1,0 +1,36 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/UWTspring2021/Memory
+vMemory
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1622586077
+!i10b 1
+!s100 giJdi876<Z;=>^G93WhiG1
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IGi`Vkh0TWX=cMVh8jN^i[2
+VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1622584230
+8./Memory.sv
+F./Memory.sv
+!i122 0
+L0 6 26
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1622586076.000000
+!s107 ./Memory.sv|
+!s90 -reportprogress|300|-work|work|+acc|./Memory.sv|
+!i113 1
+o-work work +acc
+tCvgOpt 0
+n@memory

@@ -1,0 +1,206 @@
+# Reading pref.tcl
+do runrtl.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./Control_Unit.sv 
+# -- Compiling module Control_Unit
+# -- Compiling module Control_Unit_tb
+# 
+# Top level modules:
+# 	Control_Unit_tb
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./Datapath.sv 
+# -- Compiling module Datapath
+# -- Compiling module Datapath_tb
+# 
+# Top level modules:
+# 	Datapath_tb
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./Mux2_to_1.sv 
+# -- Compiling module Mux2_to_1
+# -- Compiling module Mux2_to_1_tb
+# 
+# Top level modules:
+# 	Mux2_to_1_tb
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./InstructionMemory.sv 
+# -- Compiling module InstructionMemory
+# 
+# Top level modules:
+# 	InstructionMemory
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./AlteraROM.v 
+# -- Compiling module AlteraROM
+# 
+# Top level modules:
+# 	AlteraROM
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./Data_Memory.sv 
+# -- Compiling module Data_Memory
+# 
+# Top level modules:
+# 	Data_Memory
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:45 on Jun 10,2021
+# vlog -reportprogress 300 ./AlteraDmem.v 
+# -- Compiling module AlteraDmem
+# 
+# Top level modules:
+# 	AlteraDmem
+# End time: 11:34:45 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:46 on Jun 10,2021
+# vlog -reportprogress 300 ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 11:34:46 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:46 on Jun 10,2021
+# vlog -reportprogress 300 ./FSM.sv 
+# -- Compiling module FSM
+# -- Compiling module FSM_tb
+# 
+# Top level modules:
+# 	FSM_tb
+# End time: 11:34:46 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:46 on Jun 10,2021
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 11:34:46 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:34:46 on Jun 10,2021
+# vlog -reportprogress 300 ./Register.sv 
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# End time: 11:34:46 on Jun 10,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 11:34:46 on Jun 10,2021
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.Control_Unit
+# Loading work.InstructionMemory
+# Loading work.AlteraROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.PC
+# Loading work.IR
+# Loading work.FSM
+# Loading work.Datapath
+# Loading work.Data_Memory
+# Loading work.AlteraDmem
+# Loading work.Mux2_to_1
+# Loading work.Register
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 0   PC_Out = xx   IR_Out = xxxx  State = 0  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 10000 : Reset = 0   PC_Out = 00   IR_Out = xxxx  State = 0  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 20000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 0  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 30000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 50000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 70000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 90000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 110000 : Reset = 1   PC_Out = 02   IR_Out = 20b1  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 130000 : Reset = 1   PC_Out = 02   IR_Out = 20b1  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 150000 : Reset = 1   PC_Out = 02   IR_Out = 20b1  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 170000 : Reset = 1   PC_Out = 02   IR_Out = 20b1  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 190000 : Reset = 1   PC_Out = 03   IR_Out = 21b2  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 210000 : Reset = 1   PC_Out = 03   IR_Out = 21b2  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 230000 : Reset = 1   PC_Out = 03   IR_Out = 21b2  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 250000 : Reset = 1   PC_Out = 03   IR_Out = 21b2  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 270000 : Reset = 1   PC_Out = 04   IR_Out = 2063  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 290000 : Reset = 1   PC_Out = 04   IR_Out = 2063  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 310000 : Reset = 1   PC_Out = 04   IR_Out = 2063  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 330000 : Reset = 1   PC_Out = 04   IR_Out = 2063  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 350000 : Reset = 1   PC_Out = 05   IR_Out = 28a4  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 370000 : Reset = 1   PC_Out = 05   IR_Out = 28a4  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 390000 : Reset = 1   PC_Out = 05   IR_Out = 28a4  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 410000 : Reset = 1   PC_Out = 05   IR_Out = 28a4  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 430000 : Reset = 1   PC_Out = 06   IR_Out = 4125  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 450000 : Reset = 1   PC_Out = 06   IR_Out = 4125  State = 4  ALU A = cc05  ALU B = 01b5 ALU Out = ca50
+# Time is 470000 : Reset = 1   PC_Out = 06   IR_Out = 4125  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 490000 : Reset = 1   PC_Out = 07   IR_Out = 4346  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 510000 : Reset = 1   PC_Out = 07   IR_Out = 4346  State = 4  ALU A = 10ac  ALU B = a040 ALU Out = 706c
+# Time is 530000 : Reset = 1   PC_Out = 07   IR_Out = 4346  State = 1  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 550000 : Reset = 1   PC_Out = 08   IR_Out = 3560  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000
+# Time is 570000 : Reset = 1   PC_Out = 08   IR_Out = 3560  State = 5  ALU A = ca50  ALU B = 706c ALU Out = 3abc
+# Time is 590000 : Reset = 1   PC_Out = 08   IR_Out = 3560  State = 1  ALU A = 3abc  ALU B = 3abc ALU Out = 0000
+# Time is 610000 : Reset = 1   PC_Out = 09   IR_Out = 1cd0  State = 2  ALU A = 3abc  ALU B = 3abc ALU Out = 0000
+# Time is 630000 : Reset = 1   PC_Out = 09   IR_Out = 1cd0  State = 6  ALU A = xxxx  ALU B = 3abc ALU Out = 0000
+# Time is 650000 : Reset = 1   PC_Out = 09   IR_Out = 1cd0  State = 1  ALU A = 3abc  ALU B = 3abc ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(32)
+#    Time: 670 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 32
+# A time value could not be extracted from the current line
+# End time: 12:22:27 on Jun 10,2021, Elapsed time: 0:47:41
+# Errors: 0, Warnings: 0

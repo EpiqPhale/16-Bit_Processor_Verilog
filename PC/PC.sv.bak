@@ -1,0 +1,61 @@
+// TCES330 Spring2021
+// 05/26/21
+// Jordan, James, Tatiana
+// Project 1
+// This module represents a program counter for a 16-bit processor
+
+
+module PC(Clock, Clear, Up, Q);
+
+	input Clock, Clear, Up;
+	output [6:0] Q; //output for current program count
+	reg [6:0] Q;
+	
+
+	always @(posedge Clock) begin
+	if (!Clear & Up)
+		begin
+		Q <= Q + 7'd1; //increment the program counter
+		end
+	if(Clear)
+		begin
+		Q <= 7'd0; //reset the program counter (CLEAR)
+		end;
+	if (!Clear & !Up)
+		begin
+		Q <= Q;
+		end
+	end
+endmodule
+//testbench
+module PC_tb();
+
+	reg Clock, Clear, Up;
+	wire [6:0] Q; //output for current program count
+	integer i;
+	PC dut (Clock, Clear, Up, Q);
+
+	initial begin
+	Clock = 0;
+	for (i=0;i<=8;i=i+1)
+     	 begin
+      	 Clock = ~Clock;
+	 #10;
+      	 end;
+	end
+
+	initial begin
+	Clear=1;
+	#20;
+	Clear=0;
+	#15;
+	Up = 1;
+	#15;
+	Up = 0;
+	#15;
+	Up = 1;
+	#15;
+	Up = 0;
+	end
+
+endmodule
